@@ -2,7 +2,7 @@
 title: 用网页展示vrm模型
 published: 2026-05-24
 description: 一个用网页展示vrm模型的网站
-image: .\images\kaf-web.png
+image: ./images/kaf-web.png
 tags: [前端, Docker]
 category: Docker
 draft: false 
@@ -77,4 +77,4 @@ function animate(){
   renderer.render(scene, camera);
 }
 ```
-![项目预览](.\images\kaf-web.png)
+![项目预览](./images/kaf-web.png)
