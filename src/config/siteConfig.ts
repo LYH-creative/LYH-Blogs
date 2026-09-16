@@ -1,4 +1,4 @@
-import type { SiteConfig } from "@/types/config";
+import type { SiteConfig } from "../types/config";
 import { fontConfig } from "./fontConfig";
 
 // 定义站点语言
@@ -13,16 +13,15 @@ export const siteConfig: SiteConfig = {
 	subtitle: "self-blogs",
 
 	// 站点 URL
-	site_url: "https://firefly.cuteleaf.cn",
+	site_url: "https://lyh-blogs.vercel.app",
 
 	// 站点描述
 	description:
-		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+		"LYH-Blogs 是一个个人记录学习与生活的博客，使用 Astro 构建，内容涵盖技术、ACGN等多个领域。",
 
 	// 站点关键词
 	keywords: [
-		"Firefly",
-		"Fuwari",
+		"LYH-Blogs",
 		"Astro",
 		"ACGN",
 		"博客",

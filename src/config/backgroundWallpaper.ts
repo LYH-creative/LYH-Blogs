@@ -1,4 +1,4 @@
-import type { BackgroundWallpaperConfig } from "@/types/config";
+import type { BackgroundWallpaperConfig } from "../types/config";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 全屏透明，"none" 纯色背景无壁纸
@@ -45,6 +45,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			"assets/images/DesktopWallpaper/kaf-sakura.jpg",
 			"assets/images/DesktopWallpaper/kaf-train.jpg",
 			"assets/images/DesktopWallpaper/kaf-white.jpg",
+			// "assets/images/DesktopWallpaper/Two- anniversary.jpeg"
 		],
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
@@ -67,18 +68,18 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Welcome LYH-Blogs!",
+			// title: "小李和小庄的二周年(*^o^*)",
+			title: "Welcome to LYH's Blogs",
 			// 主页横幅主标题字体大小
-			titleSize: "3.8rem",
+			titleSize: "4rem",
 			// 主页横幅副标题
 			subtitle: [
 				"Share",
 				"Peace",
-				"Love",
-				"Happy",
+				"Love & Happiness Forever",
 			],
 			// 主页横幅副标题字体大小
-			subtitleSize: "1.5rem",
+			subtitleSize: "2rem",
 			typewriter: {
 				// 是否启用打字机效果
 				// 打字机开启 → 循环显示所有副标题
@@ -145,7 +146,25 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			switchable: false,
 		},
 	},
+	fullscreen: {
 	// 全屏透明覆盖模式特有配置
+	// 图片位置
+		// 支持所有CSS object-position值，如: 'top', 'center', 'bottom', 'left top', 'right bottom', '25% 75%', '10px 20px'..
+		// 如果不知道怎么配置百分百之类的配置，推荐直接使用：'center'居中，'top'顶部居中，'bottom' 底部居中，'left'左侧居中，'right'右侧居中
+		position: "center`",
+		// 横幅图片轮播配置，仅在当配置多张图片时生效
+		carousel: {
+			// 是否启用横幅图片轮播；关闭时保持每次刷新随机显示一张
+			// 开启轮播可能会有点奇怪，为了让图片之间的切换自然，图片会在下一张加载完成后，当前图片才会消失，所以会导致过渡有重影，可能会影响观感
+			// 目前还没有找到更好的过渡效果方案，所以如果你觉得轮播切换时的过渡效果不好，可以考虑关闭轮播，保持每次刷新随机显示一张图片
+			// 反正我目前不是很满意这个过渡效果，所以默认关闭了，如果你有更好的过渡效果方案，欢迎提交PR改进这个功能
+			enable: true,
+			// 轮播切换间隔（毫秒）
+			interval: 5000,
+			// 是否允许用户通过控制面板切换横幅轮播
+			switchable: false,
+		},
+	},
 	overlay: {
 		// 是否允许用户通过控制面板调整全屏透明模式参数
 		switchable: {
@@ -161,10 +180,5 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		blur: 10,
 		// 卡片透明度，0-1之间，值越小越透明
 		cardOpacity: 0.5,
-	},
-	// 全屏壁纸模式特有配置
-	fullscreen: {
-		// 图片位置
-		position: "center",
 	},
 };
