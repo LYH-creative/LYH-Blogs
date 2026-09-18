@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_astro/
+
+Sitemap: https://lyh-blogs.vercel.app/sitemap-index.xml
